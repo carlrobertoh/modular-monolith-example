@@ -1,0 +1,5 @@
+rootProject.name = 'modular-monolith'
+
+rootDir.eachDirMatch ~/^mod-.*/, {
+  include it.name
+}

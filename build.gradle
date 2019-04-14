@@ -1,0 +1,20 @@
+import org.springframework.boot.gradle.plugin.SpringBootPlugin
+
+plugins {
+  id 'org.springframework.boot' version '2.1.4.RELEASE' apply false
+}
+
+allprojects {
+  apply plugin: 'java-library'
+  apply plugin: 'io.spring.dependency-management'
+
+  repositories {
+    jcenter()
+  }
+
+  dependencyManagement {
+    imports {
+      mavenBom (SpringBootPlugin.BOM_COORDINATES)
+    }
+  }
+}

@@ -1,0 +1,8 @@
+apply from: "$rootDir/gradle/common.gradle"
+
+dependencies {
+    implementation(
+            project(':mod-basket'),
+            project(':mod-product')
+    )
+}
