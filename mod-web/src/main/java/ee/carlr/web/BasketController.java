@@ -20,7 +20,7 @@ class BasketController {
   private final OrderComponent orderComponent;
 
   @GetMapping(value = "/{basketId}")
-  ResponseEntity<Basket> getStatement(@PathVariable Long basketId) {
+  ResponseEntity<Basket> getBasket(@PathVariable Long basketId) {
     return new ResponseEntity<>(basketComponent.getBasket(basketId), OK);
   }
 

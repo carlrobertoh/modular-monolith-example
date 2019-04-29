@@ -31,4 +31,11 @@ class OrderComponentImpl implements OrderComponent {
   public void updateOrder(Order order) {
     orderRepository.updateOrder(order);
   }
+
+  @Override
+  public void completeOrder(Long orderId) {
+    Order order = getOrder(orderId);
+    order.markOrderComplete();
+    updateOrder(order);
+  }
 }

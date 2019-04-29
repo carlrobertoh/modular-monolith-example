@@ -5,7 +5,7 @@ import lombok.Getter;
 import java.util.ArrayList;
 import java.util.List;
 
-import static ee.carlr.order.internal.OrderState.ACCEPTED;
+import static ee.carlr.order.internal.OrderState.COMPLETED;
 import static ee.carlr.order.internal.OrderState.OPEN;
 
 @Getter
@@ -28,7 +28,7 @@ public class Order {
     orderItems.add(orderItem);
   }
 
-  public void markOrderAccepted() {
-    this.state = ACCEPTED;
+  public void markOrderComplete() {
+    this.state = COMPLETED;
   }
 }

@@ -9,4 +9,6 @@ public interface OrderComponent {
   Order getOrder(Long orderId);
 
   void updateOrder(Order order);
+
+  void completeOrder(Long orderId);
 }
