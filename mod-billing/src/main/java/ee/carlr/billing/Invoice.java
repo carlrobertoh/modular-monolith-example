@@ -1,11 +1,10 @@
-package ee.carlr.billing.internal.invoice;
+package ee.carlr.billing;
 
-import ee.carlr.order.internal.Order;
-import ee.carlr.order.internal.OrderItem;
+import ee.carlr.order.Order;
+import ee.carlr.order.OrderItem;
 import lombok.Getter;
 
-import static ee.carlr.billing.internal.invoice.InvoiceStatus.PAID;
-import static ee.carlr.billing.internal.invoice.InvoiceStatus.UNPAID;
+import static ee.carlr.billing.InvoiceStatus.*;
 
 @Getter
 public class Invoice {
@@ -14,18 +13,18 @@ public class Invoice {
   private Object customerDetails;
   private InvoiceStatus status;
 
-  Invoice(Order order) {
+  public Invoice(Order order) {
     this.status = UNPAID;
     this.order = order;
     this.customerDetails = order.getCustomerDetails();
   }
 
-  public void markInvoicePaid() {
-    this.status = PAID;
-  }
-
   void setId(Long id) {
     this.id = id;
+  }
+
+  public void markInvoicePaid() {
+    this.status = PAID;
   }
 
   public Double getTotalAmount() {

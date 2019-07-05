@@ -1,8 +1,9 @@
 package ee.carlr.billing.internal.payment;
 
+import ee.carlr.billing.Invoice;
 import ee.carlr.billing.InvoiceComponent;
 import ee.carlr.billing.PaymentComponent;
-import ee.carlr.billing.internal.invoice.Invoice;
+import ee.carlr.billing.PaymentResponse;
 import ee.carlr.order.OrderComponent;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

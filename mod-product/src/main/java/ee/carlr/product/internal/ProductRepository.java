@@ -1,5 +1,6 @@
 package ee.carlr.product.internal;
 
+import ee.carlr.product.Product;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

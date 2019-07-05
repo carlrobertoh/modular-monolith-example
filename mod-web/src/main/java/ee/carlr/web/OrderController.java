@@ -1,7 +1,7 @@
 package ee.carlr.web;
 
 import ee.carlr.order.OrderComponent;
-import ee.carlr.order.internal.Order;
+import ee.carlr.order.Order;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

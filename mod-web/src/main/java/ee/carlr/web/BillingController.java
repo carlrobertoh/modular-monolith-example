@@ -2,8 +2,8 @@ package ee.carlr.web;
 
 import ee.carlr.billing.InvoiceComponent;
 import ee.carlr.billing.PaymentComponent;
-import ee.carlr.billing.internal.invoice.Invoice;
-import ee.carlr.billing.internal.payment.PaymentResponse;
+import ee.carlr.billing.Invoice;
+import ee.carlr.billing.PaymentResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,5 +1,6 @@
 package ee.carlr.product.internal;
 
+import ee.carlr.product.Product;
 import ee.carlr.product.ProductComponent;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

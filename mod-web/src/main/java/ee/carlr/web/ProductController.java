@@ -1,7 +1,7 @@
 package ee.carlr.web;
 
 import ee.carlr.product.ProductComponent;
-import ee.carlr.product.internal.Product;
+import ee.carlr.product.Product;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,7 +1,5 @@
 package ee.carlr.product;
 
-import ee.carlr.product.internal.Product;
-
 import java.util.List;
 
 public interface ProductComponent {

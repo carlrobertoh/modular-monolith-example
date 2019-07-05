@@ -1,5 +1,9 @@
 package ee.carlr.billing.internal.invoice;
 
+import ee.carlr.billing.Invoice;
+import org.springframework.stereotype.Repository;
+
+@Repository
 class InvoiceRepository {
   void saveInvoice(Invoice invoice) {
     throw new UnsupportedOperationException();

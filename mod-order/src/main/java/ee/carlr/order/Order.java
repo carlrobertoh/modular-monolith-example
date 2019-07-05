@@ -1,12 +1,11 @@
-package ee.carlr.order.internal;
+package ee.carlr.order;
 
 import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static ee.carlr.order.internal.OrderState.COMPLETED;
-import static ee.carlr.order.internal.OrderState.OPEN;
+import static ee.carlr.order.OrderState.*;
 
 @Getter
 public class Order {
@@ -15,16 +14,16 @@ public class Order {
   private Object customerDetails;
   private OrderState state;
 
-  Order(Object customerDetails) {
+  public Order(Object customerDetails) {
     this.state = OPEN;
     this.customerDetails = customerDetails;
   }
 
-  void setId(Long id) {
+  public void setId(Long id) {
     this.id = id;
   }
 
-  void addOrderItem(OrderItem orderItem) {
+  public void addOrderItem(OrderItem orderItem) {
     orderItems.add(orderItem);
   }
 

@@ -1,9 +1,9 @@
-package ee.carlr.order.internal;
+package ee.carlr.order;
 
 import org.springframework.context.ApplicationEvent;
 
 public class OrderCreationEvent extends ApplicationEvent {
-  OrderCreationEvent(Object source) {
+  public OrderCreationEvent(Object source) {
     super(source);
   }
 

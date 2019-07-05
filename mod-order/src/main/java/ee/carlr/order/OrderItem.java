@@ -1,12 +1,11 @@
-package ee.carlr.product.internal;
+package ee.carlr.order;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class Product {
-  private Long id;
+public class OrderItem {
   private String name;
   private Double price;
 }

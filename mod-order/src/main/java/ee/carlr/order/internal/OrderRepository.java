@@ -1,5 +1,6 @@
 package ee.carlr.order.internal;
 
+import ee.carlr.order.Order;
 import org.springframework.stereotype.Repository;
 
 @Repository

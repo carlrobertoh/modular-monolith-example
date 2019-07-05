@@ -1,4 +1,4 @@
-package ee.carlr.billing.internal.payment;
+package ee.carlr.billing;
 
 import lombok.Value;
 

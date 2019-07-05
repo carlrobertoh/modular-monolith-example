@@ -1,4 +1,4 @@
-package ee.carlr.order.internal;
+package ee.carlr.order;
 
 enum OrderState {
   OPEN, COMPLETED

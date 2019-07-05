@@ -1,7 +1,7 @@
 package ee.carlr.web;
 
 import ee.carlr.basket.BasketComponent;
-import ee.carlr.basket.internal.Basket;
+import ee.carlr.basket.Basket;
 import ee.carlr.order.OrderComponent;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;

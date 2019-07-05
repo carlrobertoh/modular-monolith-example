@@ -1,7 +1,8 @@
 package ee.carlr.basket.internal;
 
+import ee.carlr.basket.Basket;
 import ee.carlr.product.ProductComponent;
-import ee.carlr.product.internal.Product;
+import ee.carlr.product.Product;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
@@ -10,7 +11,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import static ee.carlr.basket.internal.BasketState.CONFIRMED;
+import static ee.carlr.basket.BasketState.CONFIRMED;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.doReturn;

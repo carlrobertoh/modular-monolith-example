@@ -1,11 +1,12 @@
 package ee.carlr.basket.internal;
 
+import ee.carlr.basket.Basket;
 import ee.carlr.basket.BasketComponent;
 import ee.carlr.product.ProductComponent;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import static ee.carlr.basket.internal.BasketState.CONFIRMED;
+import static ee.carlr.basket.BasketState.CONFIRMED;
 
 @Component
 @RequiredArgsConstructor

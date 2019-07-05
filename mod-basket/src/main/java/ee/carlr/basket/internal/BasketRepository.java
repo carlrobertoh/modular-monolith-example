@@ -1,5 +1,6 @@
 package ee.carlr.basket.internal;
 
+import ee.carlr.basket.Basket;
 import org.springframework.stereotype.Repository;
 
 @Repository
