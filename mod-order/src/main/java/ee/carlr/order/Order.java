@@ -1,14 +1,14 @@
 package ee.carlr.order;
 
-import lombok.Getter;
-
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-import static ee.carlr.order.OrderState.*;
+import static ee.carlr.order.OrderState.COMPLETED;
+import static ee.carlr.order.OrderState.OPEN;
 
-@Getter
 public class Order {
+
   private Long id;
   private List<OrderItem> orderItems = new ArrayList<>();
   private Object customerDetails;
@@ -29,5 +29,21 @@ public class Order {
 
   public void markOrderComplete() {
     this.state = COMPLETED;
+  }
+
+  public Long getId() {
+    return id;
+  }
+
+  public List<OrderItem> getOrderItems() {
+    return Collections.unmodifiableList(orderItems);
+  }
+
+  public Object getCustomerDetails() {
+    return customerDetails;
+  }
+
+  public OrderState getState() {
+    return state;
   }
 }

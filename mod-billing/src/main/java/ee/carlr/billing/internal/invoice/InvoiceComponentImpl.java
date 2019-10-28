@@ -3,14 +3,17 @@ package ee.carlr.billing.internal.invoice;
 import ee.carlr.billing.Invoice;
 import ee.carlr.billing.InvoiceComponent;
 import ee.carlr.order.OrderCreationEvent;
-import lombok.RequiredArgsConstructor;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor
 class InvoiceComponentImpl implements InvoiceComponent {
+
   private final InvoiceRepository invoiceRepository;
+
+  InvoiceComponentImpl(InvoiceRepository invoiceRepository) {
+    this.invoiceRepository = invoiceRepository;
+  }
 
   @EventListener
   public void generateInvoice(OrderCreationEvent event) {

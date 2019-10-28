@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 class InvoiceRepository {
+
   void saveInvoice(Invoice invoice) {
     throw new UnsupportedOperationException();
   }

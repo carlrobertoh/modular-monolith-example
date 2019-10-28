@@ -2,6 +2,7 @@ apply plugin: 'org.springframework.boot'
 
 dependencies {
   compile 'org.springframework.boot:spring-boot-starter'
+
   runtime rootProject.childProjects.values().findAll {
     it.plugins.hasPlugin('java')
   }

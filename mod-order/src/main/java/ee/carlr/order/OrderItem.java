@@ -1,11 +1,20 @@
 package ee.carlr.order;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-
-@Getter
-@AllArgsConstructor
 public class OrderItem {
-  private String name;
-  private Double price;
+
+  private final String name;
+  private final Double price;
+
+  public OrderItem(String name, Double price) {
+    this.name = name;
+    this.price = price;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public Double getPrice() {
+    return price;
+  }
 }

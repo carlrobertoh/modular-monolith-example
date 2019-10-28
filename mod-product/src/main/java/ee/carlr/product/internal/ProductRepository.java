@@ -7,6 +7,7 @@ import java.util.List;
 
 @Repository
 class ProductRepository {
+
   List<Product> findAllProducts() {
     throw new UnsupportedOperationException();
   }

@@ -1,8 +1,8 @@
 package ee.carlr.basket.internal;
 
 import ee.carlr.basket.Basket;
-import ee.carlr.product.ProductComponent;
 import ee.carlr.product.Product;
+import ee.carlr.product.ProductComponent;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
@@ -12,13 +12,13 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import static ee.carlr.basket.BasketState.CONFIRMED;
-import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
 public class BasketComponentImplTest {
+
   @Captor
   private ArgumentCaptor<Basket> basketCaptor;
 
@@ -36,7 +36,7 @@ public class BasketComponentImplTest {
     Basket basket = new Basket(null);
     basketComponentImpl.confirmBasket(basket);
 
-    assertThat(basket.getState(), is(CONFIRMED));
+    assertThat(basket.getState()).isEqualTo(CONFIRMED);
     verify(basketRepository).update(basket);
   }
 
@@ -60,7 +60,8 @@ public class BasketComponentImplTest {
 
     verify(basketRepository).update(basketCaptor.capture());
     Basket actual = basketCaptor.getValue();
-    assertThat(actual.getProducts().size(), is(1));
-    assertThat(actual.getProducts().contains(product), is(true));
+
+    assertThat(actual.getProducts().size()).isOne();
+    assertThat(actual.getProducts()).contains(product);
   }
 }

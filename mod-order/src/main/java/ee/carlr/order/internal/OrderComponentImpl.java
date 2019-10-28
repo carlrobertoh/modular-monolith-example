@@ -5,15 +5,19 @@ import ee.carlr.order.Order;
 import ee.carlr.order.OrderComponent;
 import ee.carlr.order.OrderCreationEvent;
 import ee.carlr.order.OrderItem;
-import lombok.RequiredArgsConstructor;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor
 class OrderComponentImpl implements OrderComponent {
+
   private final OrderRepository orderRepository;
   private final ApplicationEventPublisher eventPublisher;
+
+  OrderComponentImpl(OrderRepository orderRepository, ApplicationEventPublisher eventPublisher) {
+    this.orderRepository = orderRepository;
+    this.eventPublisher = eventPublisher;
+  }
 
   @Override
   public Order createOrder(Basket basket) {

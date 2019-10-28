@@ -1,7 +1,5 @@
 apply from: "$rootDir/gradle/common.gradle"
 
 dependencies {
-    implementation(
-            project(':mod-order')
-    )
+    implementation(project(':mod-order'))
 }

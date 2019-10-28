@@ -1,9 +1,20 @@
 package ee.carlr.billing;
 
-import lombok.Value;
-
-@Value
 public class PaymentResponse {
-  private boolean isPaymentSuccess;
-  private Long invoiceId;
+
+  private final boolean isPaymentSuccess;
+  private final Long invoiceId;
+
+  public PaymentResponse(boolean isPaymentSuccess, Long invoiceId) {
+    this.isPaymentSuccess = isPaymentSuccess;
+    this.invoiceId = invoiceId;
+  }
+
+  public boolean isPaymentSuccess() {
+    return isPaymentSuccess;
+  }
+
+  public Long getInvoiceId() {
+    return invoiceId;
+  }
 }

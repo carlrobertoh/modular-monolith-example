@@ -5,14 +5,18 @@ import ee.carlr.billing.InvoiceComponent;
 import ee.carlr.billing.PaymentComponent;
 import ee.carlr.billing.PaymentResponse;
 import ee.carlr.order.OrderComponent;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor
 class PaymentComponentImpl implements PaymentComponent {
+
   private final OrderComponent orderComponent;
   private final InvoiceComponent invoiceComponent;
+
+  PaymentComponentImpl(OrderComponent orderComponent, InvoiceComponent invoiceComponent) {
+    this.orderComponent = orderComponent;
+    this.invoiceComponent = invoiceComponent;
+  }
 
   @Override
   public void processPayment(PaymentResponse paymentResponse) {
