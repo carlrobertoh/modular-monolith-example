@@ -1,20 +1,16 @@
-package ee.carlr.order.internal;
+package ee.carlr.order;
 
 import ee.carlr.basket.Basket;
-import ee.carlr.order.Order;
-import ee.carlr.order.OrderComponent;
-import ee.carlr.order.OrderCreationEvent;
-import ee.carlr.order.OrderItem;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
 
 @Component
-class OrderComponentImpl implements OrderComponent {
+class OrderServiceImpl implements OrderService {
 
   private final OrderRepository orderRepository;
   private final ApplicationEventPublisher eventPublisher;
 
-  OrderComponentImpl(OrderRepository orderRepository, ApplicationEventPublisher eventPublisher) {
+  OrderServiceImpl(OrderRepository orderRepository, ApplicationEventPublisher eventPublisher) {
     this.orderRepository = orderRepository;
     this.eventPublisher = eventPublisher;
   }

@@ -1,6 +1,6 @@
 package ee.carlr.basket;
 
-public interface BasketComponent {
+public interface BasketService {
 
   Basket createBasket(Object customerDetails);
 

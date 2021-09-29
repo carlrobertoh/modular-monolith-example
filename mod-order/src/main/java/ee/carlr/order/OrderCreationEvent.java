@@ -4,7 +4,7 @@ import org.springframework.context.ApplicationEvent;
 
 public class OrderCreationEvent extends ApplicationEvent {
 
-  public OrderCreationEvent(Object source) {
+  OrderCreationEvent(Order source) {
     super(source);
   }
 

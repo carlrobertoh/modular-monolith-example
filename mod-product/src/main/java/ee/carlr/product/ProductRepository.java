@@ -1,4 +1,4 @@
-package ee.carlr.product.internal;
+package ee.carlr.product;
 
 import ee.carlr.product.Product;
 import org.springframework.stereotype.Repository;

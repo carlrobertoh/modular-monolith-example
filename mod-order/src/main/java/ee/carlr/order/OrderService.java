@@ -2,7 +2,7 @@ package ee.carlr.order;
 
 import ee.carlr.basket.Basket;
 
-public interface OrderComponent {
+public interface OrderService {
 
   Order createOrder(Basket basket);
 
