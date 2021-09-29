@@ -1,4 +1,4 @@
-package ee.carlr.basket.internal;
+package ee.carlr.basket;
 
 import ee.carlr.basket.Basket;
 import org.springframework.stereotype.Repository;

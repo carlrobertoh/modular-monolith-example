@@ -1,17 +1,15 @@
-package ee.carlr.billing.internal.invoice;
+package ee.carlr.billing.invoice;
 
-import ee.carlr.billing.Invoice;
-import ee.carlr.billing.InvoiceComponent;
 import ee.carlr.order.OrderCreationEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 @Component
-class InvoiceComponentImpl implements InvoiceComponent {
+class InvoiceServiceImpl implements InvoiceService {
 
   private final InvoiceRepository invoiceRepository;
 
-  InvoiceComponentImpl(InvoiceRepository invoiceRepository) {
+  InvoiceServiceImpl(InvoiceRepository invoiceRepository) {
     this.invoiceRepository = invoiceRepository;
   }
 

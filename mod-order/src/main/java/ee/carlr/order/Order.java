@@ -23,11 +23,11 @@ public class Order {
     this.id = id;
   }
 
-  public void addOrderItem(OrderItem orderItem) {
+  void addOrderItem(OrderItem orderItem) {
     orderItems.add(orderItem);
   }
 
-  public void markOrderComplete() {
+  void markOrderComplete() {
     this.state = COMPLETED;
   }
 

@@ -1,7 +1,7 @@
 package ee.carlr.web;
 
 import ee.carlr.order.Order;
-import ee.carlr.order.OrderComponent;
+import ee.carlr.order.OrderService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,14 +14,14 @@ import static org.springframework.http.HttpStatus.OK;
 @RequestMapping("/order")
 class OrderController {
 
-  private final OrderComponent orderComponent;
+  private final OrderService orderService;
 
-  OrderController(OrderComponent orderComponent) {
-    this.orderComponent = orderComponent;
+  OrderController(OrderService orderService) {
+    this.orderService = orderService;
   }
 
   @GetMapping(value = "/{orderId}")
   ResponseEntity<Order> getOrder(@PathVariable Long orderId) {
-    return new ResponseEntity<>(orderComponent.getOrder(orderId), OK);
+    return new ResponseEntity<>(orderService.getOrder(orderId), OK);
   }
 }

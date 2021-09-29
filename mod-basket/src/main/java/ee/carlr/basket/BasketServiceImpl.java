@@ -1,19 +1,17 @@
-package ee.carlr.basket.internal;
+package ee.carlr.basket;
 
-import ee.carlr.basket.Basket;
-import ee.carlr.basket.BasketComponent;
 import ee.carlr.product.ProductComponent;
 import org.springframework.stereotype.Component;
 
 import static ee.carlr.basket.BasketState.CONFIRMED;
 
 @Component
-class BasketComponentImpl implements BasketComponent {
+class BasketServiceImpl implements BasketService {
 
   private final BasketRepository basketRepository;
   private final ProductComponent productComponent;
 
-  BasketComponentImpl(BasketRepository basketRepository, ProductComponent productComponent) {
+  BasketServiceImpl(BasketRepository basketRepository, ProductComponent productComponent) {
     this.basketRepository = basketRepository;
     this.productComponent = productComponent;
   }

@@ -1,6 +1,5 @@
-package ee.carlr.billing.internal.invoice;
+package ee.carlr.billing.invoice;
 
-import ee.carlr.billing.Invoice;
 import org.springframework.stereotype.Repository;
 
 @Repository

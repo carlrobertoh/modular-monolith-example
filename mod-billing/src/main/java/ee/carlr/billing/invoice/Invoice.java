@@ -1,10 +1,10 @@
-package ee.carlr.billing;
+package ee.carlr.billing.invoice;
 
 import ee.carlr.order.Order;
 import ee.carlr.order.OrderItem;
 
-import static ee.carlr.billing.InvoiceStatus.PAID;
-import static ee.carlr.billing.InvoiceStatus.UNPAID;
+import static ee.carlr.billing.invoice.InvoiceStatus.PAID;
+import static ee.carlr.billing.invoice.InvoiceStatus.UNPAID;
 
 public class Invoice {
 

@@ -1,4 +1,4 @@
-package ee.carlr.billing;
+package ee.carlr.billing.payment;
 
 public class PaymentResponse {
 

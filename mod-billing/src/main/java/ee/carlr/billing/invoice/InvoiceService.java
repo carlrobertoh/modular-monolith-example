@@ -1,6 +1,6 @@
-package ee.carlr.billing;
+package ee.carlr.billing.invoice;
 
-public interface InvoiceComponent {
+public interface InvoiceService {
 
   Invoice getInvoice(Long invoiceId);
 
